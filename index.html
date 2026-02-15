@@ -6,23 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>BTKcafe</title>
 </head>
 <body>
+
+<div class="wraper">
 <header class="container">
-    <span class="logo">БТКафе</span>
+    <span class="logo">БТК<small>афе</small></span>
     <nav>
-        <ul>
-            <li><a href="#">О нас</a></li>
+        <ul class="menu">
+            <li><a href="#info">О нас</a></li>
             <li><a href="#">Меню</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="hero container">
-    <img src="" alt="BTKcafe">
+    <img src="/image/logo.png" alt="BTKcafe">
     <div class="hero--info">
         <h1>Быстро, Вкусно и на связи</h1>
         <p>Напитки, выпечка и лёгкие перекусы с быстрым интернетом.</p>
@@ -30,7 +31,7 @@
     </div>
 </div>
 
-<div class="info">
+ <div id="info" class="info">
     <h2>О нас</h2>
     <div class="info-grid">
         <div class="info-card">
@@ -54,9 +55,81 @@
             <h3>Ежедневные угощения</h3>
             <p>более 20 видов напитков и десертов каждый день </p>
         </div>
+    </div>
+  </div>
+    <div class="menu-info">
+         <h2>Меню</h2>
+         <div class="menu-grid">
+             <div class="img-card">
+                 <div class="menu-card">
+                     <img src="/image/bakery.jpg" alt="wi-fi-icon">
+                     <div class="card-title">Выпечка</div>
+                 </div>
+             </div>
+             <div class="img-card">
+                 <div class="menu-card">
+                     <img src="/image/coffee.jpg" alt="check">
+                     <div class="card-title">Напитки</div>
+                 </div>
+             </div>
+             <div class="img-card">
+                 <div class="menu-card">
+                     <img src="/image/sandwich.jpg" alt="croissant">
+                     <div class="card-title">Сендвичи</div>
+                 </div>
+             </div>
+         </div>
+        <button class="arrow-btn">
+            <svg width="236" height="58" viewBox="0 0 236 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M106.5 3C107.328 3 108 2.32843 108 1.5C108 0.671573 107.328 0 106.5 0V1.5V3ZM235.561 47.5607C236.146 46.9749 236.146 46.0251 235.561 45.4393L226.015 35.8934C225.429 35.3076 224.479 35.3076 223.893 35.8934C223.308 36.4792 223.308 37.4289 223.893 38.0147L232.379 46.5L223.893 54.9853C223.308 55.5711 223.308 56.5208 223.893 57.1066C224.479 57.6924 225.429 57.6924 226.015 57.1066L235.561 47.5607ZM24 1.5V3H106.5V1.5V0H24V1.5ZM234.5 46.5V45H118V46.5V48H234.5V46.5ZM118 46.5V45H24V46.5V48H118V46.5ZM1.5 24H3C3 12.402 12.402 3 24 3V1.5V0C10.7452 0 0 10.7452 0 24H1.5ZM1.5 24H0C0 37.2548 10.7452 48 24 48V46.5V45C12.402 45 3 35.598 3 24H1.5Z" fill="#8A38CD"/>
+            </svg>
+            <span>Перейти</span>
+        </button>
+     </div>
+ </div>
 
+<div id="contacts" class="contact">
+    <div class="contact-info">
+        <h2>Контакты</h2>
+        <div class="info-work">
+            <div class="info-img">
+                <img src="/image/workTime.png" alt="">
+                <h3>Часы работы:</h3>
+                <p>Понедельник - пятница............9:30 - 20:00
+                   <p> Суббота.............................10:00-20:00</p>
+                    <p>Воскресенье......выходной </p>
+            </div>
+            <div class="info-img">
+                <img src="/image/workContact.png" alt="">
+                <h3>Контакты:</h3>
+                <p>Адрес: ул.Энгельса 6.</p>
+                    <p>Тел.: +375 44 893 47 48</p>
+                <p>Почта: BTKcafe@gmail.com</p>
+            </div>
+        </div>
     </div>
 </div>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <a href="#info">О нас</a>
+        </div>
 
+        <div class="footer-center">
+            <div class="footer-logo">БТК<span>афе</span></div>
+            <div class="socials">
+                <img src="/image/viber.png" alt="viber">
+                <img src="/image/instagram.png" alt="instagram">
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h4>Время работы:</h4>
+            <p>Пн - пт: 8:30 - 21:00</p>
+            <p>Сб: 10:00 - 20:00</p>
+            <p>Вс: выходной</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
