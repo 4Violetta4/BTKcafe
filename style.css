@@ -3,17 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    /*outline: 1px solid red;*/
 }
 body{
-    color:white;
+    color:#fff;
     width: 100%;
-    background-color: black;
+    background-color:#000;
     font-family: sans-serif;
-}
-.wraper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 a, li{
@@ -25,36 +21,33 @@ a, li{
     color:#8A38CD;
     font-size: 50px;
     font-weight: bold;
-    position: absolute;
-    left: 50%;
-    /*transform: translateX(-50%);*/
 }
-
 
 .logo small{
     font-size: 30px;
 }
 
-header .container{
-    display: flex;
-    justify-content: flex-end;
-    position:relative;
-    align-items: center;
+header{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
     padding: 20px 0;
     text-align: center;
 }
 
-.menu{
+ .menu{
     display: flex;
     gap:40px;
     font-size: 20px;
+    align-items: center;
 }
 
-.hero{
+/*блок с текстом*/
+.promo{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 30px 20px;
+    margin: 0 50px;
 
 }
 h1{
@@ -62,41 +55,48 @@ h1{
     font-weight: bold;
     font-style: italic;
 }
-.hero p{
+.promo p{
     font-size: 25px;
     max-width: 450px;
     text-align: center;
     margin: 0 100px;
 }
-.hero img{
+.promo img{
     width: 280px;
     margin: 0 100px;
 }
 
-.hero--info button{
+.promoText button{
     position:relative;
     top:20px;
     left:35%;
     background-color: #8A38CD;
     border-radius: 30px;
     color: black;
-    width: 170px;
+    width: 30%;
     border: none;
     font-size: 30px;
 }
 
-.info {
+/*aboutAs*/
+.aboutAs {
     padding: 30px 20px;
     text-align: center;
     margin: 0 30px;
 }
 
+.icon{
+    color: #fff;
+    width: 60px;
+    height: 60px;
+}
+
 h2 {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 50px;
-    position: relative;
-    display: inline-block;
+    margin: 50px 0;
+    text-align: center;
+
 }
 
 h2::after {
@@ -108,7 +108,7 @@ h2::after {
     margin: 10px auto 0;
 }
 
-.info-grid {
+.about__grid {
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
@@ -119,7 +119,7 @@ h2::after {
     gap: 40px;
 }
 
-.info-grid::before {
+.about__grid::before {
     content: "";
     position: absolute;
     top: -15px;
@@ -128,42 +128,53 @@ h2::after {
     bottom: 15px;
     border: 2px solid #8A38CD;
     pointer-events: none;
-    height: 310px;
+    height: 110%;
 }
-
-/* Карточка */
-.info-card {
+/* box */
+.about__card {
     text-align: center;
 }
 
-.icon-card img {
-    width: 60px;
+.about__card-icon {
+    align-items: center;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1); /* делает иконки белыми */
 }
 
-.info-card h3 {
+.about__card  h3 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.info-card p {
+.about__card  p {
     font-size: 14px;
     color: #ccc;
     line-height: 1.6;
 }
 /*меню карточки*/
-.menu-info{
+
+.menuCard{
     margin:30px 0 ;
     text-align: center;
 }
-.menu-card img{
+.menuCard__grid {
+    margin: 0 auto;
+    padding: 60px 5%;
+    max-width: 1400px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.menuCard__img-card img{
     width: 250px;
     height: 350px;
     box-shadow: 0 0 20px 10px rgba(68, 22, 148, 0.5);
+
 }
-.card-title {
+.menuCard__card-title {
     position: relative;
     top:-175px;
     left: 50%;
@@ -177,35 +188,28 @@ h2::after {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
 }
-.menu-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-.arrow-btn {
-    position: relative;
-    width: 350px;
-    height: 60px;
-    background: black;
+
+.menuCard__btn {
+    background:#000;
     border: none;
     cursor: pointer;
     padding: 0;
+    align-items: center;
 }
 
-.arrow-btn svg {
-    position: absolute;
-    width: 50%;
-    height: 70%;
+.btnSvg {
+    width: 70%;
+    height: 50%;
+    color: #8A38CD;
 }
 
-.arrow-btn span {
-    position: relative;
-    z-index: 1;
-    left: 35px;
-    top:5px;
+.menuCard__btn span {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    top: -75px;
+    z-index: 1;
 }
 /*контактная инфа*/
 .contact{
@@ -214,25 +218,27 @@ h2::after {
     text-align: center;
 }
 
-.info-work{
+.contact__work{
     display: flex;
 }
-.info-work h3{
+.contact__img h3{
     font-size: 30px;
     position: relative;
     z-index: 1;
     top: -150px;
 }
-.info-work p {
+.contact__img p {
    position: relative;
    z-index: 1;
     top: -150px;
 }
-.info-img img{
-    width: 777px;
+.contact__img img{
+    width: 100%;
     height: 200px;
+    display: block;
 }
 
+/*///////////////////////////////////////*/
 .footer {
     margin-top: 60px;
     border-top: 1px solid #444;

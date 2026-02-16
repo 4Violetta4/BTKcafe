@@ -1,106 +1,105 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>BTKcafe</title>
 </head>
 <body>
 
-<div class="wraper">
-<header class="container">
-    <span class="logo">БТК<small>афе</small></span>
+<header>
+    <div></div>
+    <div><span class="logo">БТК<small>афе</small></span></div>
     <nav class="menu">
         <ul class="menu">
-            <li><a href="#info">О нас</a></li>
+            <li><a href="#about">О нас</a></li>
             <li><a href="#">Меню</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
     </nav>
 </header>
 
-<div class="hero container">
+<section class="promo">
     <img src="image/logo.png" alt="Logo">
-    <div class="hero--info">
+    <div class="promoText">
         <h1>Быстро, Вкусно и на связи</h1>
         <p>Напитки, выпечка и лёгкие перекусы с быстрым интернетом.</p>
         <button class="btn" type="submit">Меню</button>
     </div>
-    </div>
-</div>
+</section>
 
- <div id="info" class="info">
+ <section id="about" class="aboutAs">
     <h2>О нас</h2>
-    <div class="info-grid">
-        <div class="info-card">
-            <div class="icon-card">
-                <img src="image/wi-fi.png" alt="wi-fi-icon">
+    <div class="about__grid">
+        <div class="about__card">
+            <div class="about__card-icon">
+               <svg class="icon"  viewBox="-1.5 0 19 19">
+                   <use href="assests/icon.svg#wiFi"></use>
+               </svg>
             </div>
             <h3>Быстрый и бесплатный Wi‑Fi</h3>
             <p>до 300 Мбит/с, чтобы работать или отдыхать без задержек</p>
         </div>
-        <div class="info-card">
-            <div class="icon-card">
-                <img src="image/check.png" alt="check">
+        <div class="about__card">
+            <div class="about__card-icon">
+                <svg class="icon"  viewBox="0 0 24 24">
+                    <use href="assests/icon.svg#receipt"></use>
+                </svg>
             </div>
             <h3>Средний чек 8-10 BYN</h3>
             <p>а кофе и сэндвич — вкусно и выгодно каждый день</p>
         </div>
-        <div class="info-card">
-            <div class="icon-card">
-                <img src="image/croissant.png" alt="croissant">
+        <div class="about__card">
+            <div class="about__card-icon">
+                <svg width="60" height="60"  viewBox="0 0 960 960" >
+                    <use href="assests/icon.svg#croissant"></use>
+                </svg>
             </div>
             <h3>Ежедневные угощения</h3>
             <p>более 20 видов напитков и десертов каждый день </p>
         </div>
     </div>
-  </div>
-    <div class="menu-info">
-         <h2>Меню</h2>
-         <div class="menu-grid">
-             <div class="img-card">
-                 <div class="menu-card">
-                     <img src="image/bakery.jpg" alt="wi-fi-icon">
-                     <div class="card-title">Выпечка</div>
-                 </div>
-             </div>
-             <div class="img-card">
-                 <div class="menu-card">
-                     <img src="image/coffee.jpg" alt="check">
-                     <div class="card-title">Напитки</div>
-                 </div>
-             </div>
-             <div class="img-card">
-                 <div class="menu-card">
-                     <img src="image/sandwich.jpg" alt="croissant">
-                     <div class="card-title">Сендвичи</div>
-                 </div>
-             </div>
-         </div>
-        <button class="arrow-btn">
-            <svg width="236" height="58" viewBox="0 0 236 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M106.5 3C107.328 3 108 2.32843 108 1.5C108 0.671573 107.328 0 106.5 0V1.5V3ZM235.561 47.5607C236.146 46.9749 236.146 46.0251 235.561 45.4393L226.015 35.8934C225.429 35.3076 224.479 35.3076 223.893 35.8934C223.308 36.4792 223.308 37.4289 223.893 38.0147L232.379 46.5L223.893 54.9853C223.308 55.5711 223.308 56.5208 223.893 57.1066C224.479 57.6924 225.429 57.6924 226.015 57.1066L235.561 47.5607ZM24 1.5V3H106.5V1.5V0H24V1.5ZM234.5 46.5V45H118V46.5V48H234.5V46.5ZM118 46.5V45H24V46.5V48H118V46.5ZM1.5 24H3C3 12.402 12.402 3 24 3V1.5V0C10.7452 0 0 10.7452 0 24H1.5ZM1.5 24H0C0 37.2548 10.7452 48 24 48V46.5V45C12.402 45 3 35.598 3 24H1.5Z" fill="#8A38CD"/>
-            </svg>
-            <span>Перейти</span>
-        </button>
-     </div>
- </div>
+ </section>
 
-<div id="contacts" class="contact">
-    <div class="contact-info">
-        <h2>Контакты</h2>
-        <div class="info-work">
-            <div class="info-img">
+<section class="menuCard">
+    <h2>Меню</h2>
+    <div class="menuCard__grid">
+        <div class="menuCard__img-card">
+                <img src="image/bakery.jpg" alt="wi-fi-icon">
+                <div class="menuCard__card-title">Выпечка</div>
+        </div>
+        <div class="menuCard__img-card">
+                <img src="image/coffee.jpg" alt="check">
+                <div class="menuCard__card-title">Напитки</div>
+        </div>
+        <div class="menuCard__img-card">
+                <img src="image/sandwich.jpg" alt="croissant">
+                <div class="menuCard__card-title">Сендвичи</div>
+        </div>
+    </div>
+    <button class="menuCard__btn">
+        <svg class="btnSvg" viewBox="0 0 236 58" >
+            <use href="assests/icon.svg#btn" ></use>
+        </svg>
+        <span>Перейти</span>
+    </button>
+</section>
+
+<section id="contacts" class="contact">
+    <h2>Контакты</h2>
+    <div class="contact__info">
+        <div class="contact__work">
+            <div class="contact__img">
                 <img src="image/workTime.png" alt="">
                 <h3>Часы работы:</h3>
                 <p>Понедельник - пятница............9:30 - 20:00
                    <p> Суббота.............................10:00-20:00</p>
                     <p>Воскресенье......выходной </p>
             </div>
-            <div class="info-img">
+            <div class="contact__img">
                 <img src="image/workContact.png" alt="">
                 <h3>Контакты:</h3>
                 <p>Адрес: ул.Энгельса 6.</p>
@@ -109,7 +108,8 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+
 <footer class="footer">
     <div class="footer-top">
         <div class="footer-left">
