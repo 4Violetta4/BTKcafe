@@ -20,7 +20,6 @@ a, li{
     text-decoration: none;
     color: white;
     list-style: none;
-
 }
 .logo{
     color:#8A38CD;
@@ -28,7 +27,7 @@ a, li{
     font-weight: bold;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    /*transform: translateX(-50%);*/
 }
 
 
@@ -36,7 +35,7 @@ a, li{
     font-size: 30px;
 }
 
-header.container{
+header .container{
     display: flex;
     justify-content: flex-end;
     position:relative;
