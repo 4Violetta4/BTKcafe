@@ -1,3 +1,319 @@
+/* Переменные */
+$color-white: #ffffff;
+$color-black: #000000;
+$color-purple: #8A38CD;
+$color-gray: #999;
+$color-light-gray: #ccc;
+
+/* Глобальные стили */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+}
+
 body {
- padding:0;
+ color: $color-white;
+ width: 100%;
+ background-color: $color-black;
+ font-family: sans-serif;
+}
+
+a,
+li {
+ text-decoration: none;
+ color: $color-white;
+ list-style: none;
+}
+
+/* Логотип */
+.logo {
+ color: $color-purple;
+ font-size: 50px;
+ font-weight: bold;
+
+ small {
+  font-size: 30px;
+ }
+}
+
+/* Header */
+header {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ padding: 20px 0;
+ text-align: center;
+}
+
+.menu {
+ display: flex;
+ gap: 40px;
+ font-size: 20px;
+ align-items: center;
+}
+
+/* Promo */
+.promo {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding: 30px 20px;
+ margin: 0 50px;
+
+ h1 {
+  font-size: 45px;
+  font-weight: bold;
+  font-style: italic;
+ }
+
+ p {
+  font-size: 25px;
+  max-width: 450px;
+  text-align: center;
+  margin: 0 100px;
+ }
+
+ img {
+  width: 280px;
+  margin: 0 100px;
+ }
+}
+
+.promoText {
+ button {
+  position: relative;
+  top: 20px;
+  left: 35%;
+  background-color: $color-purple;
+  border-radius: 30px;
+  color: black;
+  width: 30%;
+  border: none;
+  font-size: 30px;
+ }
+}
+
+/* About */
+.aboutAs {
+ padding: 30px 20px;
+ text-align: center;
+ margin: 0 30px;
+}
+
+.icon {
+ color: $color-white;
+ width: 60px;
+ height: 60px;
+}
+
+h2 {
+ font-size: 32px;
+ font-weight: 500;
+ margin: 50px 0;
+ text-align: center;
+
+ &::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: $color-purple;
+  margin: 10px auto 0;
+ }
+}
+
+.about__grid {
+ position: relative;
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 60px 40px;
+ border: 2px solid $color-purple;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 40px;
+
+ &::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid $color-purple;
+  pointer-events: none;
+  height: 110%;
+ }
+}
+
+.about__card {
+ text-align: center;
+
+ &-icon {
+  align-items: center;
+  margin-bottom: 20px;
+ }
+
+ h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+ }
+
+ p {
+  font-size: 14px;
+  color: $color-light-gray;
+  line-height: 1.6;
+ }
+}
+
+/* Menu cards */
+.menuCard {
+ margin: 30px 0;
+ text-align: center;
+}
+
+.menuCard__grid {
+ margin: 0 50px;
+ padding: 60px 5%;
+ max-width: 1400px;
+ width: 100%;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 40px;
+ justify-items: center;
+}
+
+.menuCard__img-card {
+ position: relative;
+
+ img {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 0 20px 10px rgba(68, 22, 148, 0.5);
+  display: block;
+ }
+}
+
+.menuCard__card-title {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ padding: 10px 40px;
+ color: $color-white;
+ width: 200px;
+ font-size: 26px;
+ font-weight: 500;
+ text-align: center;
+ background: rgba(255, 255, 255, 0.15);
+ backdrop-filter: blur(10px);
+}
+
+.menuCard__btn {
+ background: $color-black;
+ border: none;
+ cursor: pointer;
+ padding: 0;
+ align-items: center;
+}
+
+.btnSvg {
+ width: 70%;
+ height: 50%;
+ color: $color-purple;
+}
+
+.menuCard__btn span {
+ color: $color-white;
+ font-size: 40px;
+ font-weight: 500;
+ position: relative;
+ top: -75px;
+ z-index: 1;
+}
+
+/* Contact */
+.contact {
+ margin: 40px 0;
+ width: 100%;
+ text-align: center;
+}
+
+.contact__work {
+ display: flex;
+ width: 100%;
+}
+
+.contact__img {
+ flex: 1;
+
+ h3 {
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  top: -150px;
+ }
+
+ p {
+  position: relative;
+  z-index: 1;
+  top: -150px;
+ }
+
+ img {
+  width: 100%;
+  height: 200px;
+  display: block;
+ }
+}
+
+/* Footer */
+.footer {
+ margin-top: 60px;
+ border-top: 1px solid #444;
+ padding: 40px;
+ text-align: center;
+ color: $color-gray;
+}
+
+.footer__grid {
+ display: flex;
+ justify-content: center;
+ gap: 60px;
+ flex-wrap: wrap;
+}
+
+.footer__card {
+ flex: 1;
+ max-width: 300px;
+ text-align: center;
+
+ h4 {
+  color: $color-white;
+  margin-bottom: 10px;
+  font-size: 20px;
+ }
+}
+
+.footer-logo {
+ font-size: 40px;
+ font-weight: bold;
+ color: $color-purple;
+
+ span {
+  font-size: 24px;
+ }
+}
+
+.socials {
+ margin-top: 10px;
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+
+ svg {
+  width: 28px;
+  height: 28px;
+ }
 }
