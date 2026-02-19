@@ -43,15 +43,15 @@ h2 {
  }
 }
 
-/* Логотип */
-.logo {
- color: $color-purple;
- font-size: 50px;
- font-weight: bold;
- small {
-  font-size: 30px;
- }
-}
+///* Логотип */
+//.logo {
+// color: $color-purple;
+// font-size: 50px;
+// font-weight: bold;
+// small {
+//  font-size: 30px;
+// }
+//}
 
 /* Header */
 header > .container {
@@ -60,15 +60,51 @@ header > .container {
  padding: 20px 0;
  align-items: center;
 
- .header__block{
+ .header__block {
   display: flex;
   justify-content: center;
+ }
+
+ /* Логотип */
+ .logo {
+  color: $color-purple;
+  font-size: 50px;
+  font-weight: bold;
+  small {
+   font-size: 30px;
+  }
  }
 
  .menu {
   display: flex;
   gap: 40px;
   font-size: 20px;
+ }
+
+ @media (max-width: 426px) {
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  .header__block {
+   order: 1;
+  }
+
+  .menu {
+   order: 2;
+   justify-content: center;
+   gap: 20px;
+   font-size: 16px;
+   flex-wrap: wrap;
+  }
+
+  .logo {
+   color: $color-purple;
+   font-size: 30px;
+   font-weight: bold;
+   small {
+    font-size: 20px;
+   }
+  }
  }
 }
 
@@ -110,7 +146,43 @@ section.promo > .container {
    font-size: 30px;
   }
  }
-}
+
+ @media (max-width: 426px) {
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+
+   h1 {
+    font-size: 20px;
+    text-align: center;
+   }
+
+   p {
+    font-size: 15px;
+    max-width: 250px;
+    text-align: center;
+   }
+
+   img {
+    width: 150px;
+   }
+
+   .promoText {
+    button {
+     position: relative;
+     ////top: 20px;
+     //left: 35%;
+     background-color: $color-purple;
+     border-radius: 30px;
+     color: black;
+     width: 25%;
+     border: none;
+     font-size: 15px;
+    }
+   }
+  }
+ }
+
 
 /* About */
 
@@ -182,13 +254,29 @@ section.promo > .container {
    line-height: 1.6;
   }
  }
+ @media (max-width: 426px) {
+
+  .icon {
+   color: $color-white;
+   width: 50px;
+   height: 50px;
+  }
+  .about__grid {
+   max-width: 90%;
+   grid-template-columns:  1fr;
+   gap: 20px;
+
+   &::before {
+    height: 104%;
+   }
+  }
+
+ }
 }
 
 /* Menu cards */
 .menuCard {
-
  .container {
-
   h2 {
    margin-bottom: 40px;
   }
@@ -250,7 +338,39 @@ section.promo > .container {
     position: absolute;
    }
   }
+  @media (max-width: 426px) {
+   .menuCard__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+   }
 
+   img {
+    width: 70px;
+    height: 170px;
+   }
+   .menuCard__btn {
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+    padding: 15px 0;
+
+    .btnSvg {
+     width: 200px;
+     color: $color-purple;
+    }
+    .contact__img h3,
+    .contact__img p {
+     margin: 0;
+    }
+
+    span {
+     color: $color-white;
+     font-size: 30px;
+    }
+   }
+  }
  }
 }
 
@@ -266,25 +386,53 @@ section.promo > .container {
  }
 
  &__img {
-  flex: 1;
+  position: relative;
+
+  .contact__text{
+   position: absolute;
+   width: 100%;
+   top: 20%;
+   left: 50%;
+   transform: translateX(-50%);
+  }
 
   h3 {
    font-size: 30px;
-   position: relative;
-   z-index: 1;
-   top: -150px;
+   text-align: center;
+   margin: 0;
   }
 
   p {
-   position: relative;
-   z-index: 1;
-   top: -150px;
+   margin: 0;
   }
 
   img {
    width: 100%;
    height: 200px;
    display: block;
+  }
+ }
+ @media (max-width: 426px) {
+  .contact__work {
+   flex-direction: column;
+   gap: 10px;
+  }
+
+  .contact__img {
+   position: relative;
+  }
+
+  .contact__img img {
+   height: 150px;
+  }
+
+  .contact__img h3 {
+   font-size: 20px;
+  }
+
+  .contact__img p {
+   font-size: 13px;
+   line-height: 1.4;
   }
  }
 }
@@ -357,6 +505,45 @@ footer {
 
       &:hover {
        fill: $color-purple;
+      }
+     }
+    }
+   }
+  }
+ }
+
+ @media (max-width: 426px) {
+  .container {
+   .footer__grid {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+
+    .footer__card {
+     flex: 1 1 auto;
+     max-width: 180px;
+     text-align: center;
+
+     h4 {
+      font-size: 16px;
+     }
+
+     p {
+      font-size: 12px;
+     }
+
+     .socials svg {
+      width: 20px;
+      height: 20px;
+     }
+     .logo {
+      color: $color-purple;
+      font-size: 20px;
+      font-weight: bold;
+      small {
+       font-size: 10px;
       }
      }
     }
