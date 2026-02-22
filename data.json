@@ -1,0 +1,148 @@
+[
+  {
+    "id": "drinks",
+    "name": "Напитки",
+    "type": "category",
+    "active": true,
+    "list": [
+      {
+        "id": "americano",
+        "name": "Американо",
+        "image": "assests/photo/Americano.jpg",
+        "variant": [
+          {
+            "size": "250",
+            "unit": "ml",
+            "price": "7",
+            "currency": "BYN"
+          },
+          {
+            "size": "350",
+            "unit": "ml",
+            "price": "8",
+            "currency": "BYN"
+          }
+        ]
+      },
+      {
+        "id": "latte",
+        "name": "Латте",
+        "image": "assests/photo/latte.jpg",
+        "variant": [
+          {
+            "size": "250",
+            "unit": "ml",
+            "price": "8",
+            "currency": "BYN"
+          },
+          {
+            "size": "350",
+            "unit": "ml",
+            "price": "9",
+            "currency": "BYN"
+          }
+        ]
+      },
+      {
+        "id": "espresso",
+        "name": "Эспрессо",
+        "image": "assests/photo/Espresso.jpg",
+        "size": "50",
+        "unit": "ml",
+        "price": "8",
+        "currency": "BYN"
+      },
+      {
+        "id": "cappuccino",
+        "name": "Капучино",
+        "image": "assests/photo/cappuccino.jpg",
+        "variant": [
+          {
+            "size": "250",
+            "unit": "ml",
+            "price": "8",
+            "currency": "BYN"
+          },
+          {
+            "size": "350",
+            "unit": "ml",
+            "price": "9",
+            "currency": "BYN"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id":"bakery",
+    "name": "Десерты/Выпечка",
+    "type": "category",
+    "active": true,
+    "list": [
+      {
+        "id": "pieCherry",
+        "name": "Вишнёвый пирог",
+        "image": "assests/photo/piesCherry.jpg",
+        "price": "10",
+        "currency": "BYN"
+      },
+      {
+        "id": "cinnamon",
+        "name": "Синабон",
+        "image": "assests/photo/Cinnamon.jpg",
+        "price": "8",
+        "currency": "BYN"
+      },
+      {
+        "id": "cupcake",
+        "name": "Кекс с вишней",
+        "image": "assests/photo/cupcake.jpg",
+        "price": "7",
+        "currency": "BYN"
+      },
+      {
+        "id": "pieChocolate",
+        "name": "Шоколадный пирог",
+        "image": "assests/photo/pie.jpg",
+        "price": "10",
+        "currency": "BYN"
+      }
+    ]
+  },
+  {
+    "id": "sandwitch",
+    "name": "Сендвичи",
+    "type": "category",
+    "active": true,
+    "list": [
+      {
+        "id": "sandwitchHam",
+        "name": "Сендвич с ветчиной",
+        "image": "assests/photo/hamSandwitch.jpg",
+        "price": "10",
+        "currency": "BYN"
+      },
+      {
+        "id": "sandwitchCheese",
+        "name": "Сендвич с сыром",
+        "image": "assests/photo/cheeseSandwitch.jpg",
+        "price": "8",
+        "currency": "BYN"
+      },
+      {
+        "id": "sandwitchSalmon",
+        "name": "Сендвич с лососем",
+        "image": "assests/photo/salmonSandwitch.jpg",
+        "price": "7",
+        "currency": "BYN"
+      },
+      {
+        "id": "sandwitchChicken",
+        "name": "Сендвич с курицей ",
+        "image": "assests/photo/sandwitch.jpg",
+        "price": "10",
+        "currency": "BYN"
+      }
+    ]
+  }
+]

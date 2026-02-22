@@ -458,4 +458,10 @@ footer .container .footer__grid .footer__card .socials svg:hover {
   }
 }
 
+.imgCategory {
+  width: 25vw;
+  height: 60vh;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=style.css.map */
