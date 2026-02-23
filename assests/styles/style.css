@@ -8,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   color: #ffffff;
   width: 100%;
@@ -23,9 +27,9 @@ li {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: clamp(1.8rem, 3vw, 2rem);
   font-weight: 500;
-  margin: 50px 0;
+  margin: 3rem 0;
   text-align: center;
 }
 h2::after {
@@ -53,16 +57,43 @@ header > .container {
 }
 header > .container .logo {
   color: #8A38CD;
-  font-size: 50px;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
 }
 header > .container .logo small {
-  font-size: 30px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 header > .container .menu {
   display: flex;
   gap: 40px;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+@media (max-width: 1025px) {
+  header > .container header > .container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (max-width: 769px) {
+  header > .container header > .container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  header > .container header > .container .header__block {
+    order: 1;
+  }
+  header > .container header > .container .menu {
+    order: 2;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+  header > .container header > .container .logo {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  header > .container header > .container .logo small {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
 }
 @media (max-width: 426px) {
   header > .container {
@@ -76,7 +107,6 @@ header > .container .menu {
     order: 2;
     justify-content: center;
     gap: 20px;
-    font-size: 16px;
     flex-wrap: wrap;
   }
   header > .container .logo {
@@ -96,12 +126,11 @@ section.promo > .container {
   align-items: center;
 }
 section.promo > .container h1 {
-  font-size: 45px;
   font-weight: bold;
   font-style: italic;
 }
 section.promo > .container p {
-  font-size: 25px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   max-width: 450px;
   text-align: center;
   margin: 0 100px;
@@ -109,6 +138,7 @@ section.promo > .container p {
 section.promo > .container img {
   width: 280px;
   margin: 0 100px;
+  transition: all 0.3s ease-in-out;
 }
 section.promo > .container .promoText button {
   position: relative;
@@ -119,7 +149,38 @@ section.promo > .container .promoText button {
   color: black;
   width: 30%;
   border: none;
-  font-size: 30px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+  section.promo > .container section.promo > .container img {
+    width: 220px;
+    margin: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  section.promo > .container section.promo > .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  section.promo > .container section.promo > .container h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  section.promo > .container section.promo > .container p {
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+    max-width: 350px;
+  }
+  section.promo > .container section.promo > .container .promoText button {
+    width: 50%;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+  }
+  section.promo > .container section.promo > .container img {
+    width: 180px;
+    margin: 0;
+  }
 }
 @media (max-width: 426px) {
   section.promo > .container {
@@ -144,9 +205,8 @@ section.promo > .container .promoText button {
     background-color: #8A38CD;
     border-radius: 30px;
     color: black;
-    width: 25%;
     border: none;
-    font-size: 15px;
+    font-size: 0.875rem;
   }
 }
 
@@ -200,14 +260,19 @@ section.promo > .container .promoText button {
   margin-bottom: 20px;
 }
 .aboutAs .about__card h3 {
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 500;
   margin-bottom: 10px;
 }
 .aboutAs .about__card p {
-  font-size: 14px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   color: #ccc;
   line-height: 1.6;
+}
+@media (max-width: 769px) {
+  .aboutAs .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 426px) {
   .aboutAs .icon {
@@ -276,9 +341,25 @@ section.promo > .container .promoText button {
 }
 .menuCard .container .menuCard__btn span {
   color: #ffffff;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
   position: absolute;
+}
+@media (max-width: 768px) {
+  .menuCard .container .menuCard__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .menuCard .container .menuCard__img-card img {
+    width: 200px;
+    height: 300px;
+  }
+  .menuCard .container .menuCard__btn .btnSvg {
+    width: 200px;
+  }
+  .menuCard .container .menuCard__btn span {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 426px) {
   .menuCard .container .menuCard__grid {
@@ -332,17 +413,33 @@ section.promo > .container .promoText button {
   transform: translateX(-50%);
 }
 .contact__img h3 {
-  font-size: 30px;
+  font-size: clamp(1.25rem, 3vw, 2rem);
   text-align: center;
   margin: 0;
 }
 .contact__img p {
   margin: 0;
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 .contact__img img {
   width: 100%;
   height: 200px;
   display: block;
+}
+@media (max-width: 768px) {
+  .contact .contact__work {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact .contact__img img {
+    height: 150px;
+  }
+  .contact .contact__img h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+  .contact .contact__img p {
+    font-size: 0.875rem;
+  }
 }
 @media (max-width: 426px) {
   .contact .contact__work {
@@ -385,7 +482,7 @@ footer .container .footer__grid .footer__card {
 footer .container .footer__grid .footer__card h4 {
   color: #ffffff;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 footer .container .footer__grid .footer__card a {
   color: #ffffff;
@@ -397,18 +494,18 @@ footer .container .footer__grid .footer__card a:hover {
   color: #8A38CD;
 }
 footer .container .footer__grid .footer__card p {
-  font-size: 14px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.5;
   color: #ccc;
   margin-bottom: 8px;
 }
 footer .container .footer__grid .footer__card .footer-logo {
-  font-size: 40px;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: bold;
   color: #8A38CD;
 }
 footer .container .footer__grid .footer__card .footer-logo span {
-  font-size: 24px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 footer .container .footer__grid .footer__card .socials {
   margin-top: 10px;
@@ -425,6 +522,12 @@ footer .container .footer__grid .footer__card .socials svg {
 footer .container .footer__grid .footer__card .socials svg:hover {
   fill: #8A38CD;
 }
+@media (max-width: 768px) {
+  footer .footer__grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 @media (max-width: 426px) {
   footer .container .footer__grid {
     flex-direction: row;
@@ -439,10 +542,10 @@ footer .container .footer__grid .footer__card .socials svg:hover {
     text-align: center;
   }
   footer .container .footer__grid .footer__card h4 {
-    font-size: 16px;
+    font-size: 1rem;
   }
   footer .container .footer__grid .footer__card p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   footer .container .footer__grid .footer__card .socials svg {
     width: 20px;

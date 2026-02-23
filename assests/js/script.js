@@ -1,75 +1,70 @@
-fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        renderCatalog(data);
-    })
-    .catch(error => console.error('Ошибка:', error));
+(function () { //важно!! Чтобы не могли обратиться
+    `use strict`
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            renderCatalog(data);
+        })
+        .catch(error => console.error('Ошибка:', error));
 
 
-function renderCatalog(data){
-    const catalog=document.getElementById('catalog');
+    function renderCatalog(data) {
+        const catalog = document.getElementById('catalog');
 
-    data.forEach(category => {
-        const section = document.createElement('section');
+        data.forEach(category => {
+            const section = document.createElement('section');
 
-        const container = document.createElement('div');
-        container.classList.add('container');
+            const container = document.createElement('div');
+            container.classList.add('container');
 
-        const title = document.createElement('h2');
-        title.textContent = category.name;
+            const title = document.createElement('h2');
+            title.textContent = category.name;
 
-        container.appendChild(title);
+            container.appendChild(title);
 
-        category.list.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('category');
+            category.list.forEach(item => {
+                const card = document.createElement('div');
+                card.classList.add('category');
 
-            const imgCategory = document.createElement('img');
-            imgCategory.classList.add('imgCategory');
-            imgCategory.src = item.image;
+                const imgCategory = document.createElement('img');
+                imgCategory.classList.add('imgCategory');
+                imgCategory.src = item.image;
 
-            const categoryText = document.createElement('div');
-            categoryText.classList.add('category_text');
+                const categoryText = document.createElement('div');
+                categoryText.classList.add('category_text');
 
-            const nameVariant = document.createElement('h3');
-            nameVariant.textContent = item.name;
-            categoryText.appendChild(nameVariant);
+                const nameVariant = document.createElement('h3');
+                nameVariant.textContent = item.name;
+                categoryText.appendChild(nameVariant);
 
-            if (item.variant) {
+                if (item.variant) {
 
-                item.variant.forEach(variant => {
+                    item.variant.forEach(variant => {
+
+                        const p = document.createElement('p');
+                        p.textContent =
+                            `${variant.size} ${variant.unit} — ${variant.price} ${variant.currency}`;
+
+                        categoryText.appendChild(p);
+                    });
+
+                } else {
 
                     const p = document.createElement('p');
                     p.textContent =
-                        `${variant.size} ${variant.unit} — ${variant.price} ${variant.currency}`;
+                        `${item.price} ${item.currency}`;
 
-                    categoryText.appendChild(p); // ← ВАЖНО
-                });
+                    categoryText.appendChild(p);
+                }
 
-            } else if (item.size) {
+                card.appendChild(imgCategory);
+                card.appendChild(categoryText);
 
-                const p = document.createElement('p');
-                p.textContent =
-                    `${item.size} ${item.unit} — ${item.price} ${item.currency}`;
+                container.appendChild(card);
+            });
+            section.appendChild(container);
+            catalog.appendChild(section);
 
-                categoryText.appendChild(p);
-
-            } else {
-
-                const p = document.createElement('p');
-                p.textContent =
-                    `${item.price} ${item.currency}`;
-
-                categoryText.appendChild(p);
-            }
-
-            card.appendChild(imgCategory);
-            card.appendChild(categoryText);
-
-            container.appendChild(card);
-        });
-        section.appendChild(container);
-        catalog.appendChild(section);
-
-    })
-}
+        })
+    }
+})();
