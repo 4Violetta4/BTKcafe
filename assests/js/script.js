@@ -1,6 +1,6 @@
 (function () { //важно!! Чтобы не могли обратиться
     `use strict`
-    fetch('data.json')
+    fetch('https://api.jsonsilo.com/public/5c002cb3-8a58-43be-9c97-e1922f452414')
         .then(response => response.json())
         .then(data => {
             renderCatalog(data);
@@ -11,6 +11,17 @@
     function renderCatalog(data) {
         const catalog = document.getElementById('catalog');
         catalog.classList.add('container');
+
+        function renderStars(rating) {
+            let starsHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                const active = rating >= i ? 'active' : '';
+                starsHTML += `<span class="star ${active}" data-value="${i}">★</span>`;
+            }
+            return starsHTML;
+        }
+
+
 
         data.forEach(category => {
             const section = document.createElement('section');
@@ -57,6 +68,19 @@
 
                     cardText.appendChild(p);
                 }
+
+                const ratingDiv = document.createElement('div');
+                ratingDiv.classList.add('rating');
+
+                ratingDiv.innerHTML = renderStars(item.rating || 0);
+                cardText.appendChild(ratingDiv);
+
+                ratingDiv.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('star')) {
+                        item.rating = parseInt(e.target.dataset.value);
+                        ratingDiv.innerHTML = renderStars(item.rating);
+                    }
+                });
 
                 card.appendChild(imgCard);
                 card.appendChild(cardText);

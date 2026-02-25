@@ -659,4 +659,16 @@ footer .container .footer__grid .footer__card .socials svg:hover {
   visibility: hidden;
 }
 
+/*rating*/
+.star {
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+  margin-right: 2px;
+}
+
+.star.active {
+  color: gold;
+}
+
 /*# sourceMappingURL=style.css.map */

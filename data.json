@@ -9,6 +9,7 @@
         "id": "americano",
         "name": "Американо",
         "image": "assests/photo/Americano.jpg",
+        "rating": null,
         "variant": [
           {
             "size": "250",
@@ -28,6 +29,7 @@
         "id": "latte",
         "name": "Латте",
         "image": "assests/photo/latte.jpg",
+        "rating": null,
         "variant": [
           {
             "size": "250",
@@ -47,6 +49,7 @@
         "id": "espresso",
         "name": "Эспрессо",
         "image": "assests/photo/Espresso.jpg",
+        "rating": null,
         "size": "50",
         "unit": "ml",
         "price": "8",
@@ -56,6 +59,7 @@
         "id": "cappuccino",
         "name": "Капучино",
         "image": "assests/photo/cappuccino.jpg",
+        "rating": null,
         "variant": [
           {
             "size": "250",
@@ -84,28 +88,32 @@
         "name": "Вишнёвый пирог",
         "image": "assests/photo/piesCherry.jpg",
         "price": "10",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "cinnamon",
         "name": "Синабон",
         "image": "assests/photo/Cinnamon.jpg",
         "price": "8",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "cupcake",
         "name": "Кекс с вишней",
         "image": "assests/photo/cupcake.jpg",
         "price": "7",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "pieChocolate",
         "name": "Шоколадный пирог",
         "image": "assests/photo/pie.jpg",
         "price": "10",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       }
     ]
   },
@@ -120,28 +128,32 @@
         "name": "Сендвич с ветчиной",
         "image": "assests/photo/hamSandwitch.jpg",
         "price": "10",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "sandwitchCheese",
         "name": "Сендвич с сыром",
         "image": "assests/photo/cheeseSandwitch.jpg",
         "price": "8",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "sandwitchSalmon",
         "name": "Сендвич с лососем",
         "image": "assests/photo/salmonSandwitch.jpg",
         "price": "7",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       },
       {
         "id": "sandwitchChicken",
         "name": "Сендвич с курицей ",
         "image": "assests/photo/sandwitch.jpg",
         "price": "10",
-        "currency": "BYN"
+        "currency": "BYN",
+        "rating": null
       }
     ]
   }
