@@ -9,17 +9,21 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="stylesheet" href="assests/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assests/styles/style.css">
+    <script src="assests/js/script.js" defer></script>
     <title>BTKcafe</title>
 </head>
 <body>
 
+<div id="loader">
+    <span class="loader__spinner"></span>
+</div>
+
 <header>
     <div class="container">
     <div class="header__block"></div>
-    <div class="header__block"><span class="logo">БТК<small>афе</small></span></div>
+        <div class="header__block"><a href="index.html"><span class="logo">БТК<small>афе</small></span></a></div>
     <nav class="menu">
         <ul class="menu">
             <li><a href="#about">О нас</a></li>
@@ -32,7 +36,11 @@
 
 <section class="promo">
     <div class="container">
-    <img src="image/logo.png" alt="Logo">
+        <picture>
+            <img src="image/logo.png" alt="Logo">
+            <source srcset="image/logo.webp" type="image/webp">
+        </picture>
+
     <div class="promoText">
         <h1>Быстро, Вкусно и на связи</h1>
         <p>Напитки, выпечка и лёгкие перекусы с быстрым интернетом.</p>
@@ -81,15 +89,24 @@
     <h2>Меню</h2>
     <div class="menuCard__grid">
         <div class="menuCard__img-card">
-            <img src="image/bakery.jpg" alt="wi-fi-icon">
+            <picture>
+                <img src="image/bakery.jpg" alt="wi-fi-icon">
+                <source srcset="image/bakery.webp" type="image/webp">
+            </picture>
             <div class="menuCard__card-title">Выпечка</div>
         </div>
         <div class="menuCard__img-card">
-            <img src="image/coffee.jpg" alt="check">
+            <picture>
+                <img src="image/coffee.jpg" alt="check">
+                <source srcset="image/coffee.webp" type="image/webp">
+            </picture>
             <div class="menuCard__card-title">Напитки</div>
         </div>
         <div class="menuCard__img-card">
-            <img src="image/sandwich.jpg" alt="croissant">
+            <picture>
+                <img src="image/sandwich.jpg" alt="croissant">
+                <source srcset="image/sandwich.webp" type="image/webp">
+            </picture>
             <div class="menuCard__card-title">Сендвичи</div>
         </div>
     </div>
@@ -108,7 +125,10 @@
     <div class="contact__info">
         <div class="contact__work">
             <div class="contact__img">
-                <img src="image/workTime.png" alt="">
+                <picture>
+                    <img src="image/workTime.png" alt="">
+                    <source srcset="image/workTime.webp" type="image/webp">
+                </picture>
                 <div class="contact__text">
                 <h3>Часы работы:</h3>
                 <p>Понедельник - пятница............9:30 - 20:00</p>
@@ -117,7 +137,10 @@
             </div>
             </div>
             <div class="contact__img">
-                <img src="image/workContact.png" alt="">
+                <picture>
+                    <img src="image/workContact.png" alt="">
+                    <source srcset="image/workContact.webp" type="image/webp">
+                </picture>
                 <div class="contact__text">
                 <h3>Контакты:</h3>
                 <p>Адрес: ул.Энгельса 6.</p>

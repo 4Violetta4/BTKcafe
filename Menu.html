@@ -9,17 +9,19 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="stylesheet" href="assests/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assests/styles/style.css">
     <script src="assests/js/script.js" defer></script>
     <title>Меню</title>
 </head>
 <body>
+<div id="loader">
+    <span class="loader__spinner"></span>
+</div>
 <header>
     <div class="container">
         <div class="header__block"></div>
-        <div class="header__block"><span class="logo">БТК<small>афе</small></span></div>
+        <div class="header__block"><a href="index.html"><span class="logo">БТК<small>афе</small></span></a></div>
         <nav class="menu">
             <ul class="menu">
                 <li><a href="index.html">О нас</a></li>
@@ -30,7 +32,7 @@
     </div>
 </header>
 
-<div class="container" id="catalog"></div>
+<div  id="catalog"></div>
 
 <footer>
     <div class="container">
