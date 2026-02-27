@@ -15,6 +15,7 @@ $color-light-gray: #ccc;
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,9 +68,24 @@ header > .container {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
 
+
     small {
       font-size: clamp(1rem, 3vw, 1.5rem);
     }
+
+  }
+  .header__block a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  nav .menu a:hover {
+  border-bottom: 3px solid $color-purple;
+    padding: 7px 0;
   }
 
   .menu {
@@ -146,7 +162,6 @@ section.promo > .container {
   align-items: center;
 
   h1 {
-    //font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     font-style: italic;
   }
@@ -175,7 +190,11 @@ section.promo > .container {
       width: 30%;
       border: none;
       font-size: clamp(1rem, 3vw, 1.5rem);
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease;
+    }
+    button:hover{
+      transform: scale(1.12);
+      color: #ffffff;
     }
   }
 
@@ -384,6 +403,13 @@ section.promo > .container {
           background: rgba(255, 255, 255, 0.15);
           backdrop-filter: blur(10px);
         }
+        .menuCard__card-title:hover{
+          border-bottom: 4px solid $color-purple;
+        }
+        a:hover{
+          color: $color-purple;
+        }
+
       }
     }
 
@@ -398,10 +424,13 @@ section.promo > .container {
       margin: 20px 0;
       width: 100%;
       padding: 15px 0;
+      transition: transform 0.3s ease;
+
 
       .btnSvg {
         width: 300px;
         color: $color-purple;
+        transition: transform 0.3s ease;
       }
 
       span {
@@ -409,6 +438,13 @@ section.promo > .container {
         font-size: clamp(1.5rem, 3vw, 2.5rem);
         font-weight: 500;
         position: absolute;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        .btnSvg, span {
+          transform: scale(1.2);
+        }
       }
     }
 
@@ -672,6 +708,7 @@ footer {
   }
 }
 
+/*Menu grid*/
 .container {
   margin-bottom: 20px;
 
@@ -691,32 +728,33 @@ footer {
       }
     }
   }
-}
-
-@media (max-width: 1025px) {
-  .container__card {
-    grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 1025px) {
+    .container__card {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
-}
 
-@media (max-width: 769px) {
-  .container__card {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 769px) {
+    .container__card {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
 
-@media (max-width: 426px) {
-  .container__card {
-    grid-template-columns: 1fr;
+  @media (max-width: 426px) {
+    .container__card {
+      grid-template-columns: 1fr;
 
-    .card {
-      .imgCard {
-        width: 180px;
-        height: 200px;
+      .card {
+        .imgCard {
+          width: 180px;
+          height: 200px;
+        }
       }
     }
   }
 }
+
+
 
 /*loader*/
 .loader__spinner {
@@ -790,6 +828,8 @@ footer {
   opacity: 0;
   visibility: hidden;
 }
+
+
 
 /*rating*/
 .star {

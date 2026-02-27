@@ -44,7 +44,7 @@
     <div class="promoText">
         <h1>Быстро, Вкусно и на связи</h1>
         <p>Напитки, выпечка и лёгкие перекусы с быстрым интернетом.</p>
-        <button class="btn" type="submit">Меню</button>
+        <button class="btn" type="submit" onclick="window.location.href='menu.html'">Меню</button>
     </div>
     </div>
 </section>
@@ -93,28 +93,28 @@
                 <img src="image/bakery.jpg" alt="wi-fi-icon">
                 <source srcset="image/bakery.webp" type="image/webp">
             </picture>
-            <div class="menuCard__card-title">Выпечка</div>
+            <div class="menuCard__card-title"><a href="Menu.html#bakery">Выпечка</a></div>
         </div>
         <div class="menuCard__img-card">
             <picture>
                 <img src="image/coffee.jpg" alt="check">
                 <source srcset="image/coffee.webp" type="image/webp">
             </picture>
-            <div class="menuCard__card-title">Напитки</div>
+            <div class="menuCard__card-title"><a href="Menu.html#drinks">Напитки</a></div>
         </div>
         <div class="menuCard__img-card">
             <picture>
                 <img src="image/sandwich.jpg" alt="croissant">
                 <source srcset="image/sandwich.webp" type="image/webp">
             </picture>
-            <div class="menuCard__card-title">Сендвичи</div>
+            <div class="menuCard__card-title"><a href="Menu.html#sandwitch">Сендвичи</a></div>
         </div>
     </div>
     <button class="menuCard__btn">
         <svg class="btnSvg" viewBox="0 0 236 58">
             <use href="assests/icon.svg#btn"></use>
         </svg>
-        <span>Перейти</span>
+        <span><a href="Menu.html">Перейти</a></span>
     </button>
     </div>
 </section>

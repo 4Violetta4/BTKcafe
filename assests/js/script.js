@@ -21,10 +21,14 @@
             return starsHTML;
         }
 
-
-
         data.forEach(category => {
+            // let section = '';
+            // section += `<section>`;
+            // section += `<div class="container__card">`;
+            // section += `<h2>${category.name}</h2>`;
+
             const section = document.createElement('section');
+            section.id = category.id;
 
             const container = document.createElement('div');
             container.classList.add('container__card');
@@ -38,9 +42,24 @@
                 const card = document.createElement('div');
                 card.classList.add('card');
 
+                const picture = document.createElement('picture');
+
+                const sourceWebp = document.createElement('source');
+                sourceWebp.srcset = item.image.webp;
+                sourceWebp.type = 'image/webp';
+
+                const sourceJpg = document.createElement('source');
+                sourceJpg.srcset = item.image.jpg;
+                sourceJpg.type = 'image/jpeg';
+
                 const imgCard = document.createElement('img');
                 imgCard.classList.add('imgCard');
-                imgCard.src = item.image;
+                imgCard.src = item.image.jpg;
+                imgCard.alt = item.name;
+
+                picture.appendChild(sourceWebp);
+                picture.appendChild(sourceJpg);
+                picture.appendChild(imgCard);
 
                 const cardText = document.createElement('div');
                 cardText.classList.add('Card_text');

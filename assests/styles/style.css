@@ -10,6 +10,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -62,6 +63,17 @@ header > .container .logo {
 }
 header > .container .logo small {
   font-size: clamp(1rem, 3vw, 1.5rem);
+}
+header > .container .header__block a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+header > .container .header__block a:hover {
+  transform: scale(1.05);
+}
+header > .container nav .menu a:hover {
+  border-bottom: 3px solid #8A38CD;
+  padding: 7px 0;
 }
 header > .container .menu {
   display: flex;
@@ -150,7 +162,11 @@ section.promo > .container .promoText button {
   width: 30%;
   border: none;
   font-size: clamp(1rem, 3vw, 1.5rem);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease;
+}
+section.promo > .container .promoText button:hover {
+  transform: scale(1.12);
+  color: #ffffff;
 }
 @media (max-width: 1024px) {
   section.promo > .container img {
@@ -323,6 +339,12 @@ section.promo > .container .promoText button {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
 }
+.menuCard .container .menuCard__grid .menuCard__img-card .menuCard__card-title:hover {
+  border-bottom: 4px solid #8A38CD;
+}
+.menuCard .container .menuCard__grid .menuCard__img-card a:hover {
+  color: #8A38CD;
+}
 .menuCard .container .menuCard__btn {
   background: #000000;
   display: flex;
@@ -334,16 +356,22 @@ section.promo > .container .promoText button {
   margin: 20px 0;
   width: 100%;
   padding: 15px 0;
+  transition: transform 0.3s ease;
 }
 .menuCard .container .menuCard__btn .btnSvg {
   width: 300px;
   color: #8A38CD;
+  transition: transform 0.3s ease;
 }
 .menuCard .container .menuCard__btn span {
   color: #ffffff;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
   position: absolute;
+  transition: transform 0.3s ease;
+}
+.menuCard .container .menuCard__btn:hover .btnSvg, .menuCard .container .menuCard__btn:hover span {
+  transform: scale(1.2);
 }
 @media (max-width: 768px) {
   .menuCard .container .menuCard__grid {
@@ -561,6 +589,7 @@ footer .container .footer__grid .footer__card .socials svg:hover {
   }
 }
 
+/*Menu grid*/
 .container {
   margin-bottom: 20px;
 }
@@ -578,26 +607,26 @@ footer .container .footer__grid .footer__card .socials svg:hover {
   width: 200px;
   height: 220px;
 }
-
 @media (max-width: 1025px) {
-  .container__card {
+  .container .container__card {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 769px) {
-  .container__card {
+  .container .container__card {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 426px) {
-  .container__card {
+  .container .container__card {
     grid-template-columns: 1fr;
   }
-  .container__card .card .imgCard {
+  .container .container__card .card .imgCard {
     width: 180px;
     height: 200px;
   }
 }
+
 /*loader*/
 .loader__spinner {
   color: #ffffff;
